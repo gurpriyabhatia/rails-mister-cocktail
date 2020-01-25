@@ -1,0 +1,22 @@
+<h1> Fancy Cocktails </h1>
+
+<div>
+ <button type="button" class="btn btn-light">
+    <%= link_to "Add a New Cocktail", new_cocktail_path  %>
+ </button>
+</div>
+
+<div class = "row">
+  <% @cocktails.each do |cocktail| %>
+    <div class="col-4 mb-5">
+      <div class="card-trip">
+        <img src=<%="https://source.unsplash.com/800x600/?cocktail/#{rand(50)}"%>>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
