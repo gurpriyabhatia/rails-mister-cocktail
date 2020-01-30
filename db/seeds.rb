@@ -28,8 +28,8 @@ end
 Ingredient.create!(ingredient_attributes)
 
 Cocktail.destroy_all
-10.times do
+5.times do
   Cocktail.create(
-    name: Faker::FunnyName.name
+    name: Faker::Coffee.blend_name
   )
 end
